@@ -22,6 +22,21 @@ public class TestMap {
 		System.out.println(map.get("10"));
 		System.out.println(map.get("11"));
 		
+		 HashMap<String, Object> hash = new HashMap<String, Object>();
+	        TMap c1;
+	        TMap c2;
+	        c1 = new TMap(1, "Maruthi");
+	        c2 = new TMap(2, "Toyota");
+	        hash.put("A", c1);
+	        hash.put("B", c2);
+	        for(Object t:hash.values()) {
+	          System.out.println(hash.get("A"));
+	        }
+		
+		
+		
+		
+		
 		
 	}
 }

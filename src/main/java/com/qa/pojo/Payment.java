@@ -42,6 +42,7 @@ public class Payment
     public void setAmount (String Amount)
     {
         this.Amount = Amount;
+        
     }
 
     public String getPaymentType ()
