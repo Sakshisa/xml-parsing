@@ -36,19 +36,19 @@ public class TestClass {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 
 		// Document document = builder.parse(new File("NewFile.xml"));
-		//https://stackoverflow.com/questions/48883762/how-to-read-multiple-xml-files-in-java
+		// https://stackoverflow.com/questions/48883762/how-to-read-multiple-xml-files-in-java
 		File dir = new File("/Users/sourabhsharma/Downloads/97023");
 		if (dir.exists() && dir.isDirectory()) {
 			File[] files = dir.listFiles((d, name) -> name.endsWith(".xml"));
 			if (files != null) {
 				for (File file : files) {
-					String path=file.getAbsolutePath();
-					System.out.println("PATH..... " +  path);
+					String path = file.getAbsolutePath();
+					System.out.println("PATH..... " + path);
 
-					String xml = new String(Files.readAllBytes(file.toPath()), Charset.defaultCharset());
-					//System.out.println("XML ........" + xml);
-					Document document = builder
-							.parse(new File(path));
+					// String xml = new String(Files.readAllBytes(file.toPath()),
+					// Charset.defaultCharset());
+					// System.out.println("XML ........" + xml);
+					Document document = builder.parse(new File(path));
 
 					List<Check> check = new ArrayList<Check>();
 

@@ -5,13 +5,14 @@ public class TMap {
 	private int sum;
 
 	private String checkID;
+	private String OrderTime;
 
 	public int getsum() {
 		return sum;
 	}
 
-	public void setOrderTime(int sum) {
-		this.sum = sum;
+	public void setOrderTime(String OrderTime) {
+		this.OrderTime = OrderTime;
 	}
 
 	public String getcheckID() {
@@ -26,6 +27,14 @@ public class TMap {
 
 		this.sum = sum;
 		this.checkID = checkID;
+
+	}
+	
+	public TMap(int sum, String checkID, String OrderTime ){
+
+		this.sum = sum;
+		this.checkID = checkID;
+		this.OrderTime= OrderTime;
 
 	}
 	/*
