@@ -17,7 +17,7 @@ public class Check {
 
 	private Payment Payment;
 
-	private String SystemGuestCount;
+	private double SystemGuestCount;
 
 	private String CheckID;
 
@@ -86,11 +86,11 @@ public class Check {
 		this.Payment = Payment;
 	}
 
-	public String getSystemGuestCount() {
+	public double getSystemGuestCount() {
 		return SystemGuestCount;
 	}
 
-	public void setSystemGuestCount(String SystemGuestCount) {
+	public void setSystemGuestCount(int SystemGuestCount) {
 		this.SystemGuestCount = SystemGuestCount;
 	}
 
@@ -134,7 +134,17 @@ public class Check {
 		this.EmployeeName = EmployeeName;
 	}
 
-	public Check(String CheckID, String EmployeeName, String EmployeeId, List<Item> item) {
+	public Check(String CheckID, String EmployeeName, String EmployeeId, double guestCount , List<Item> item) {
+		this.CheckID = CheckID;
+		this.EmployeeName = EmployeeName;
+		this.EmployeeId = EmployeeId;
+		this.SystemGuestCount= guestCount;
+		this.Item= item;
+
+	}
+	
+	
+	public Check(String CheckID, String EmployeeName, String EmployeeId , List<Item> item) {
 		this.CheckID = CheckID;
 		this.EmployeeName = EmployeeName;
 		this.EmployeeId = EmployeeId;

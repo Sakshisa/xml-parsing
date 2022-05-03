@@ -1,15 +1,11 @@
 package com.qa.test;
 
-import java.awt.GraphicsConfigTemplate;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -31,6 +27,7 @@ public class TestClass {
 
 		// HashMap<String, Object> priceSum = new HashMap<String, Object>();
 		priceSum = new HashMap<String, Object>();
+		List<Check> check = new ArrayList<Check>();
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
@@ -50,8 +47,6 @@ public class TestClass {
 					// System.out.println("XML ........" + xml);
 					Document document = builder.parse(new File(path));
 
-					List<Check> check = new ArrayList<Check>();
-
 					// System.out.println("Root element :" +
 					// document.getDocumentElement().getNodeName());
 
@@ -61,6 +56,9 @@ public class TestClass {
 					for (int temp = 0; temp < nList.getLength(); temp++) {
 						List<Item> item = new ArrayList<Item>();
 						Node nNode = nList.item(temp);
+						System.out.println("TEST...........");
+						System.out.println("Node........ + " + nNode.getNodeValue());
+
 						// System.out.println("Current Element :" + nNode.getNodeName());
 
 						if (nNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -87,8 +85,9 @@ public class TestClass {
 								String ItemID = eElement.getElementsByTagName("ItemID").item(i).getTextContent();
 								String RestaurantNumber = eElement.getElementsByTagName("RestaurantNumber").item(i)
 										.getTextContent();
-								String ItemQuantity = eElement.getElementsByTagName("ItemQuantity").item(i)
+								String ItemQuantity1 = eElement.getElementsByTagName("ItemQuantity").item(i)
 										.getTextContent();
+								int ItemQuantity = Integer.parseInt(ItemQuantity1);
 								String ItemName = eElement.getElementsByTagName("ItemName").item(i).getTextContent();
 								String LineType = eElement.getElementsByTagName("LineType").item(i).getTextContent();
 								item.add(new Item(ItemPrice, ItemID, RestaurantNumber, ItemQuantity, ItemName,

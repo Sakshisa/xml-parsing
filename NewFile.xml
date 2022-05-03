@@ -64,8 +64,8 @@
 		<ServerGuestCount>1</ServerGuestCount>
 		<SystemGuestCount>3</SystemGuestCount>
 		<CheckOrderType>DineIn</CheckOrderType>
-		<EmployeeId>1446</EmployeeId>
-		<EmployeeName>EMMONS, CASSANDRA</EmployeeName>
+		<EmployeeId>1481</EmployeeId>
+		<EmployeeName>CAMPOS, JESSICA</EmployeeName>
 		<Item>
 			<RestaurantNumber>82021</RestaurantNumber>
 			<CheckID>1272130</CheckID>
@@ -74,9 +74,9 @@
 			<MenuItemID>2</MenuItemID>
 			<ItemID>5772</ItemID>
 			<LineType>SALE</LineType>
-			<ItemQuantity>1</ItemQuantity>
+			<ItemQuantity>10</ItemQuantity>
 			<ReductionCode>0</ReductionCode>
-			<ItemPrice>0</ItemPrice>
+			<ItemPrice>10</ItemPrice>
 			<FoodTax>0</FoodTax>
 			<LiquorTax>0</LiquorTax>
 			<ItemOrderType>DineIn</ItemOrderType>

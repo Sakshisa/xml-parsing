@@ -19,7 +19,7 @@ public class Item {
 
 	private String CheckID;
 
-	private String ItemQuantity;
+	private int ItemQuantity;
 
 	private String MenuItemID;
 
@@ -65,8 +65,8 @@ public class Item {
 		return ItemPrice;
 	}
 
-	public void setItemPrice(double ItemPrice) {
-		this.ItemPrice = ItemPrice;
+	public double setItemPrice(double ItemPrice) {
+		return this.ItemPrice = ItemPrice;
 	}
 
 	public String getSeqNumber() {
@@ -101,11 +101,11 @@ public class Item {
 		this.CheckID = CheckID;
 	}
 
-	public String getItemQuantity() {
+	public int getItemQuantity() {
 		return ItemQuantity;
 	}
 
-	public void setItemQuantity(String ItemQuantity) {
+	public void setItemQuantity(int ItemQuantity) {
 		this.ItemQuantity = ItemQuantity;
 	}
 
@@ -142,17 +142,17 @@ public class Item {
 		this.LineType = LineType;
 	}
 
-	public Item(double itemPrice2, String ItemID, String RestaurantNumber, String ItemQuantity, String ItemName, String LineType ) {
+	public Item(double itemPrice2, String ItemID, String RestaurantNumber, int ItemQuantity, String ItemName,
+			String LineType) {
 
 		this.ItemPrice = itemPrice2;
-		this.ItemID= ItemID;
-		this.RestaurantNumber= RestaurantNumber;
+		this.ItemID = ItemID;
+		this.RestaurantNumber = RestaurantNumber;
 
-		this.ItemQuantity= ItemQuantity;
-		this.ItemName= ItemName;
-		this.LineType= LineType;
-		
-		
+		this.ItemQuantity = ItemQuantity;
+		this.ItemName = ItemName;
+		this.LineType = LineType;
+
 	}
 	/*
 	 * @Override public String toString() { return
@@ -165,9 +165,15 @@ public class Item {
 	 * +ReductionCode+", LineType = "+LineType+"]"; }
 	 */
 
+	public Item(double itemPrice2, int quantity) {
+		this.ItemPrice = itemPrice2;
+		this.ItemQuantity = quantity;
+
+	}
+
 	public String toString() {
-		return "[ItemPrice = " + ItemPrice + ", ItemID = " + ItemID + ", RestaurantNumber = "
-				+ RestaurantNumber + ", CheckID = " + CheckID + ", " + "ItemQuantity = " + ItemQuantity
-				+ ",  ItemName = " + ItemName + ", LineType = " + LineType + "]";
+		return "[ItemPrice = " + ItemPrice + ", ItemID = " + ItemID + ", RestaurantNumber = " + RestaurantNumber
+				+ ", CheckID = " + CheckID + ", " + "ItemQuantity = " + ItemQuantity + ",  ItemName = " + ItemName
+				+ ", LineType = " + LineType + "]";
 	}
 }
